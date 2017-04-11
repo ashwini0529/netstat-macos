@@ -13,6 +13,9 @@ class SpeedView: NSView {
     @IBOutlet weak var uploadText: NSTextField!
     @IBOutlet weak var downloadText: NSTextField!
     @IBAction func TestButton(_ sender: NSButton) {
+        
+        uploadText.stringValue = "20Kbps"
+        downloadText.stringValue = "35Kbps"
     }
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)

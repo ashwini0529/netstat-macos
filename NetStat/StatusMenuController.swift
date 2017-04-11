@@ -11,6 +11,10 @@ import Cocoa
 class StatusMenuController: NSObject {
 
     @IBOutlet weak var statusMenu: NSMenu!
+    @IBOutlet weak var SpeedView: SpeedView!
+    var speedMenuItem: NSMenuItem!
+    
+    
     let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     
     @IBAction func QuitButton(_ sender: NSMenuItem) {
@@ -21,9 +25,13 @@ class StatusMenuController: NSObject {
     
     override func awakeFromNib() {
         // Set up the icon
+        
+        speedMenuItem = statusMenu.item(withTitle: "Speed")
+        speedMenuItem.view = SpeedView
         let icon = NSImage(named: "line-chart")
         icon?.isTemplate = true // best for dark mode
         statusItem.image = icon
+        
         statusItem.menu = statusMenu
         
         let reachability = Reachability()

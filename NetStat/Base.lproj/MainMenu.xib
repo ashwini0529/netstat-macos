@@ -17,6 +17,9 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu id="CwV-n1-CVJ">
             <items>
+                <menuItem title="Speed" id="5Y5-1F-Ojs" userLabel="SpeedView">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
                 <menuItem title="Quit" state="on" id="jER-1z-CXZ">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -24,10 +27,11 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="44" y="74"/>
+            <point key="canvasLocation" x="43.5" y="63.5"/>
         </menu>
         <customObject id="OgN-hl-ySW" customClass="StatusMenuController" customModule="NetStat" customModuleProvider="target">
             <connections>
+                <outlet property="SpeedView" destination="idU-5V-2dB" id="8q5-kJ-rK2"/>
                 <outlet property="statusMenu" destination="CwV-n1-CVJ" id="BhG-uJ-dLr"/>
             </connections>
         </customObject>
@@ -90,9 +94,10 @@
             </subviews>
             <connections>
                 <outlet property="downloadText" destination="DiM-Jt-Eh1" id="oaG-cg-ViY"/>
+                <outlet property="menu" destination="CwV-n1-CVJ" id="HrI-bF-zfF"/>
                 <outlet property="uploadText" destination="4lG-MV-qz0" id="whA-l6-ewO"/>
             </connections>
-            <point key="canvasLocation" x="101" y="293.5"/>
+            <point key="canvasLocation" x="79" y="236"/>
         </customView>
     </objects>
     <resources>
